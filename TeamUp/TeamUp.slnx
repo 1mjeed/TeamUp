@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../TeamUpCore/TeamUpCore.csproj" />
+  <Project Path="TeamUp.csproj" />
+</Solution>
