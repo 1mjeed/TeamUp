@@ -1,0 +1,12 @@
+C:\TeamUpFolder\TeamUpCore\bin\Debug\net10.0\TeamUpCore.deps.json
+C:\TeamUpFolder\TeamUpCore\bin\Debug\net10.0\TeamUpCore.dll
+C:\TeamUpFolder\TeamUpCore\bin\Debug\net10.0\TeamUpCore.pdb
+C:\TeamUpFolder\TeamUpCore\obj\Debug\net10.0\TeamUpCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\TeamUpFolder\TeamUpCore\obj\Debug\net10.0\TeamUpCore.AssemblyInfoInputs.cache
+C:\TeamUpFolder\TeamUpCore\obj\Debug\net10.0\TeamUpCore.AssemblyInfo.cs
+C:\TeamUpFolder\TeamUpCore\obj\Debug\net10.0\TeamUpCore.csproj.CoreCompileInputs.cache
+C:\TeamUpFolder\TeamUpCore\obj\Debug\net10.0\TeamUpCore.dll
+C:\TeamUpFolder\TeamUpCore\obj\Debug\net10.0\refint\TeamUpCore.dll
+C:\TeamUpFolder\TeamUpCore\obj\Debug\net10.0\TeamUpCore.pdb
+C:\TeamUpFolder\TeamUpCore\obj\Debug\net10.0\ref\TeamUpCore.dll
+C:\TeamUpFolder\TeamUpCore\obj\Debug\net10.0\TeamUpCore.csproj.Up2Date

@@ -1,0 +1,15 @@
+C:\TeamUpFolder\TeamUp.Data\bin\Debug\net10.0\TeamUpData.deps.json
+C:\TeamUpFolder\TeamUp.Data\bin\Debug\net10.0\TeamUpData.dll
+C:\TeamUpFolder\TeamUp.Data\bin\Debug\net10.0\TeamUpData.pdb
+C:\TeamUpFolder\TeamUp.Data\bin\Debug\net10.0\TeamUpCore.dll
+C:\TeamUpFolder\TeamUp.Data\bin\Debug\net10.0\TeamUpCore.pdb
+C:\TeamUpFolder\TeamUp.Data\obj\Debug\net10.0\TeamUpData.csproj.AssemblyReference.cache
+C:\TeamUpFolder\TeamUp.Data\obj\Debug\net10.0\TeamUpData.GeneratedMSBuildEditorConfig.editorconfig
+C:\TeamUpFolder\TeamUp.Data\obj\Debug\net10.0\TeamUpData.AssemblyInfoInputs.cache
+C:\TeamUpFolder\TeamUp.Data\obj\Debug\net10.0\TeamUpData.AssemblyInfo.cs
+C:\TeamUpFolder\TeamUp.Data\obj\Debug\net10.0\TeamUpData.csproj.CoreCompileInputs.cache
+C:\TeamUpFolder\TeamUp.Data\obj\Debug\net10.0\TeamUpData.csproj.Up2Date
+C:\TeamUpFolder\TeamUp.Data\obj\Debug\net10.0\TeamUpData.dll
+C:\TeamUpFolder\TeamUp.Data\obj\Debug\net10.0\refint\TeamUpData.dll
+C:\TeamUpFolder\TeamUp.Data\obj\Debug\net10.0\TeamUpData.pdb
+C:\TeamUpFolder\TeamUp.Data\obj\Debug\net10.0\ref\TeamUpData.dll
