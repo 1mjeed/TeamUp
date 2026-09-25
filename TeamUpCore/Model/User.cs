@@ -25,7 +25,7 @@ namespace TeamUpCore.Model
         public string UNEnumber { get; set; }
 
         /// <summary>
-        /// Full Name
+        ///  Name
         /// </summary>
         [Required]
         [StringLength(100)]
@@ -58,13 +58,13 @@ namespace TeamUpCore.Model
         /// User Bio / Description
         /// </summary>
         [StringLength(500)]
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
         /// <summary>
         /// Profile Image URL
         /// </summary>
         [StringLength(500)]
-        public string ImgUrl { get; set; }
+        public string? ImgUrl { get; set; }
 
         #endregion
 
