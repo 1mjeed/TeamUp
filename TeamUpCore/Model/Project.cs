@@ -69,5 +69,14 @@ namespace TeamUpCore.Model
 
         public ICollection<Registration> Registrations { get; set; } = new List<Registration>();
         #endregion
+
+        #region NotMapped
+       // [NotMapped]
+       // public string CategoryName { get; set; }
+        //[NotMapped]
+        //public string OwnerName { get; set; }
+       // [NotMapped]
+        //public List<string> TeamMembersNames { get; set; } = new List<string>();
+        #endregion
     }
 }

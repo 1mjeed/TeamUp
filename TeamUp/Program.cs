@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using TeamUpData;
+using TeamUpServices.PROJECT.ABSTRACTION;
+using TeamUpServices.PROJECT.IMPLEMENTATION;
 using TeamUpServices.USERS.ABSTRACTION;
 using TeamUpServices.USERS.IMPLEMENTATION;
 namespace TeamUp
@@ -25,6 +27,13 @@ namespace TeamUp
             builder.Services.AddScoped<IUsersQueries, UsersQueries>();
             builder.Services.AddScoped<IUserCommand, UserCommand>();
             #endregion
+
+            #region Dependency Injection Project  
+            builder.Services.AddScoped<IProjectCommand, ProjectCommand>();
+            builder.Services.AddScoped<IProjectQueries, ProjectQueries>();
+            #endregion
+
+
 
             #region app
             var app = builder.Build();

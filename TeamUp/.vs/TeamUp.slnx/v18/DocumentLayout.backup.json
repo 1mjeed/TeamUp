@@ -3,10 +3,8 @@
   "WorkspaceRootPath": "C:\\TeamUpFolder\\TeamUp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2B8FD14A-5AE1-4796-9A7C-14918ABDED6B}|..\\TeamUpServices\\TeamUpServices.csproj|c:\\teamupfolder\\teamupservices\\users\\mappingdtos\\usermapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2B8FD14A-5AE1-4796-9A7C-14918ABDED6B}|..\\TeamUpServices\\TeamUpServices.csproj|c:\\teamupfolder\\teamupservices\\users\\dtos\\usercreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A0354C88-B26D-FAB0-1767-17E96A6FE427}|TeamUpAPI.csproj|c:\\teamupfolder\\teamup\\controllers\\user\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0354C88-B26D-FAB0-1767-17E96A6FE427}|TeamUpAPI.csproj|solutionrelative:controllers\\user\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -16,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -29,32 +27,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:11:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserMapping.cs",
-              "DocumentMoniker": "C:\\TeamUpFolder\\TeamUpServices\\USERS\\MAPPINGDTOs\\UserMapping.cs",
-              "RelativeDocumentMoniker": "..\\TeamUpServices\\USERS\\MAPPINGDTOs\\UserMapping.cs",
-              "ToolTip": "C:\\TeamUpFolder\\TeamUpServices\\USERS\\MAPPINGDTOs\\UserMapping.cs",
-              "RelativeToolTip": "..\\TeamUpServices\\USERS\\MAPPINGDTOs\\UserMapping.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-25T14:42:53.586Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserCreateDto.cs",
-              "DocumentMoniker": "C:\\TeamUpFolder\\TeamUpServices\\USERS\\DTOS\\UserCreateDto.cs",
-              "RelativeDocumentMoniker": "..\\TeamUpServices\\USERS\\DTOS\\UserCreateDto.cs",
-              "ToolTip": "C:\\TeamUpFolder\\TeamUpServices\\USERS\\DTOS\\UserCreateDto.cs",
-              "RelativeToolTip": "..\\TeamUpServices\\USERS\\DTOS\\UserCreateDto.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-25T14:42:45.912Z",
-              "EditorCaption": ""
             }
           ]
         },
@@ -65,6 +37,40 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "01ddd7b4-7de8-4808-aeb2-c08fcf5ca65b",
+        "Display": 0,
+        "X": 706,
+        "Y": 366,
+        "Width": 952,
+        "Height": 611,
+        "WindowState": 2
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\TeamUpFolder\\TeamUp\\Controllers\\User\\UsersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\User\\UsersController.cs",
+              "ToolTip": "C:\\TeamUpFolder\\TeamUp\\Controllers\\User\\UsersController.cs",
+              "RelativeToolTip": "Controllers\\User\\UsersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-25T19:33:44.989Z",
+              "EditorCaption": ""
             }
           ]
         }

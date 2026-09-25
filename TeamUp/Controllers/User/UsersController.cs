@@ -34,7 +34,10 @@ namespace TeamUpAPI.Controllers.User
         [Route("GetUserById/{id}")]
         public async Task<IActionResult> GetUserById(int id)
         {
+            if (id < 1) return BadRequest();
+
             var user = await _usersQueries.GetUserByIdAsync(id);
+
             if (user == null) return NotFound();
 
             return Ok(user);
@@ -54,9 +57,12 @@ namespace TeamUpAPI.Controllers.User
 
         #region Update User
 
-        [HttpPut("{id}")]
+        [HttpPut]
+        [Route("UpdateUser/{id}")]
         public async Task<IActionResult> UpdateUser(int id, UserUpdateDto updateDto)
         {
+            if(id <1) return BadRequest();
+
             var isUpdated = await _usersCommand.UpdateUserAsync(id, updateDto);
 
             if (!isUpdated) return NotFound();
@@ -66,9 +72,12 @@ namespace TeamUpAPI.Controllers.User
         #endregion
 
         #region Delete User
-        [HttpDelete("{id}")]
+        [HttpDelete]
+        [Route("UpdateUser/{id}")]
         public async Task<IActionResult> DeleteUser(int id)
         {
+            if (id < 1) return BadRequest();
+
             var isDeleted = await _usersCommand.DeleteUserAsync(id);
 
             if (!isDeleted) return NotFound();
