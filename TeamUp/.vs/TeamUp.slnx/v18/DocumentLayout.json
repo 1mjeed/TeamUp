@@ -3,13 +3,10 @@
   "WorkspaceRootPath": "C:\\TeamUpFolder\\TeamUp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2B8FD14A-5AE1-4796-9A7C-14918ABDED6B}|..\\TeamUpServices\\TeamUpServices.csproj|c:\\teamupfolder\\teamupservices\\users\\implementation\\usercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2B8FD14A-5AE1-4796-9A7C-14918ABDED6B}|..\\TeamUpServices\\TeamUpServices.csproj|c:\\teamupfolder\\teamupservices\\users\\mappingdtos\\usermapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2B8FD14A-5AE1-4796-9A7C-14918ABDED6B}|..\\TeamUpServices\\TeamUpServices.csproj|c:\\teamupfolder\\teamupservices\\users\\abstraction\\iusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2B8FD14A-5AE1-4796-9A7C-14918ABDED6B}|..\\TeamUpServices\\TeamUpServices.csproj|c:\\teamupfolder\\teamupservices\\users\\dtos\\usercreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,47 +16,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserMapping.cs",
-              "DocumentMoniker": "C:\\TeamUpFolder\\TeamUpServices\\USERS\\MAPPINGDTOs\\UserMapping.cs",
-              "RelativeDocumentMoniker": "..\\TeamUpServices\\USERS\\MAPPINGDTOs\\UserMapping.cs",
-              "ToolTip": "C:\\TeamUpFolder\\TeamUpServices\\USERS\\MAPPINGDTOs\\UserMapping.cs",
-              "RelativeToolTip": "..\\TeamUpServices\\USERS\\MAPPINGDTOs\\UserMapping.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-23T22:40:20.117Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserCommand.cs",
-              "DocumentMoniker": "C:\\TeamUpFolder\\TeamUpServices\\USERS\\IMPLEMENTATION\\UserCommand.cs",
-              "RelativeDocumentMoniker": "..\\TeamUpServices\\USERS\\IMPLEMENTATION\\UserCommand.cs",
-              "ToolTip": "C:\\TeamUpFolder\\TeamUpServices\\USERS\\IMPLEMENTATION\\UserCommand.cs",
-              "RelativeToolTip": "..\\TeamUpServices\\USERS\\IMPLEMENTATION\\UserCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-23T22:28:02.306Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IUserCommand.cs",
-              "DocumentMoniker": "C:\\TeamUpFolder\\TeamUpServices\\USERS\\ABSTRACTION\\IUserCommand.cs",
-              "RelativeDocumentMoniker": "..\\TeamUpServices\\USERS\\ABSTRACTION\\IUserCommand.cs",
-              "ToolTip": "C:\\TeamUpFolder\\TeamUpServices\\USERS\\ABSTRACTION\\IUserCommand.cs",
-              "RelativeToolTip": "..\\TeamUpServices\\USERS\\ABSTRACTION\\IUserCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-23T21:30:12.75Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
@@ -71,6 +29,32 @@
             {
               "$type": "Bookmark",
               "Name": "ST:11:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserMapping.cs",
+              "DocumentMoniker": "C:\\TeamUpFolder\\TeamUpServices\\USERS\\MAPPINGDTOs\\UserMapping.cs",
+              "RelativeDocumentMoniker": "..\\TeamUpServices\\USERS\\MAPPINGDTOs\\UserMapping.cs",
+              "ToolTip": "C:\\TeamUpFolder\\TeamUpServices\\USERS\\MAPPINGDTOs\\UserMapping.cs",
+              "RelativeToolTip": "..\\TeamUpServices\\USERS\\MAPPINGDTOs\\UserMapping.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-25T14:42:53.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserCreateDto.cs",
+              "DocumentMoniker": "C:\\TeamUpFolder\\TeamUpServices\\USERS\\DTOS\\UserCreateDto.cs",
+              "RelativeDocumentMoniker": "..\\TeamUpServices\\USERS\\DTOS\\UserCreateDto.cs",
+              "ToolTip": "C:\\TeamUpFolder\\TeamUpServices\\USERS\\DTOS\\UserCreateDto.cs",
+              "RelativeToolTip": "..\\TeamUpServices\\USERS\\DTOS\\UserCreateDto.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-25T14:42:45.912Z",
+              "EditorCaption": ""
             }
           ]
         },

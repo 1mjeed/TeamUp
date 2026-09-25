@@ -1,0 +1,17 @@
+C:\TeamUpFolder\TeamUpServices\bin\Debug\net10.0\TeamUpServices.deps.json
+C:\TeamUpFolder\TeamUpServices\bin\Debug\net10.0\TeamUpServices.dll
+C:\TeamUpFolder\TeamUpServices\bin\Debug\net10.0\TeamUpServices.pdb
+C:\TeamUpFolder\TeamUpServices\bin\Debug\net10.0\TeamUpCore.dll
+C:\TeamUpFolder\TeamUpServices\bin\Debug\net10.0\TeamUpData.dll
+C:\TeamUpFolder\TeamUpServices\bin\Debug\net10.0\TeamUpData.pdb
+C:\TeamUpFolder\TeamUpServices\bin\Debug\net10.0\TeamUpCore.pdb
+C:\TeamUpFolder\TeamUpServices\obj\Debug\net10.0\TeamUpServices.csproj.AssemblyReference.cache
+C:\TeamUpFolder\TeamUpServices\obj\Debug\net10.0\TeamUpServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\TeamUpFolder\TeamUpServices\obj\Debug\net10.0\TeamUpServices.AssemblyInfoInputs.cache
+C:\TeamUpFolder\TeamUpServices\obj\Debug\net10.0\TeamUpServices.AssemblyInfo.cs
+C:\TeamUpFolder\TeamUpServices\obj\Debug\net10.0\TeamUpServices.csproj.CoreCompileInputs.cache
+C:\TeamUpFolder\TeamUpServices\obj\Debug\net10.0\TeamUpSe.F2803E17.Up2Date
+C:\TeamUpFolder\TeamUpServices\obj\Debug\net10.0\TeamUpServices.dll
+C:\TeamUpFolder\TeamUpServices\obj\Debug\net10.0\refint\TeamUpServices.dll
+C:\TeamUpFolder\TeamUpServices\obj\Debug\net10.0\TeamUpServices.pdb
+C:\TeamUpFolder\TeamUpServices\obj\Debug\net10.0\ref\TeamUpServices.dll

@@ -2,5 +2,5 @@
   <Project Path="../TeamUp.Data/TeamUpData.csproj" Id="9650815c-904f-4812-bf0f-1c456cd37329" />
   <Project Path="../TeamUpCore/TeamUpCore.csproj" />
   <Project Path="../TeamUpServices/TeamUpServices.csproj" Id="2b8fd14a-5ae1-4796-9a7c-14918abded6b" />
-  <Project Path="TeamUp.csproj" />
+  <Project Path="TeamUpAPI.csproj" />
 </Solution>
