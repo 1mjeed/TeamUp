@@ -3,18 +3,23 @@
   "WorkspaceRootPath": "C:\\TeamUpFolder\\TeamUp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A0354C88-B26D-FAB0-1767-17E96A6FE427}|TeamUpAPI.csproj|c:\\teamupfolder\\teamup\\controllers\\role\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A0354C88-B26D-FAB0-1767-17E96A6FE427}|TeamUpAPI.csproj|solutionrelative:controllers\\role\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A0354C88-B26D-FAB0-1767-17E96A6FE427}|TeamUpAPI.csproj|c:\\teamupfolder\\teamup\\controllers\\categorie\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0354C88-B26D-FAB0-1767-17E96A6FE427}|TeamUpAPI.csproj|solutionrelative:controllers\\categorie\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2B8FD14A-5AE1-4796-9A7C-14918ABDED6B}|..\\TeamUpServices\\TeamUpServices.csproj|c:\\teamupfolder\\teamupservices\\users\\implementation\\usercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2B8FD14A-5AE1-4796-9A7C-14918ABDED6B}|..\\TeamUpServices\\TeamUpServices.csproj|c:\\teamupfolder\\teamupservices\\category\\implementation\\categoryqueries.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A0354C88-B26D-FAB0-1767-17E96A6FE427}|TeamUpAPI.csproj|c:\\teamupfolder\\teamup\\controllers\\user\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A0354C88-B26D-FAB0-1767-17E96A6FE427}|TeamUpAPI.csproj|solutionrelative:controllers\\user\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2B8FD14A-5AE1-4796-9A7C-14918ABDED6B}|..\\TeamUpServices\\TeamUpServices.csproj|c:\\teamupfolder\\teamupservices\\category\\implementation\\categorycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2B8FD14A-5AE1-4796-9A7C-14918ABDED6B}|..\\TeamUpServices\\TeamUpServices.csproj|c:\\teamupfolder\\teamupservices\\users\\mappingdtos\\usermapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2B8FD14A-5AE1-4796-9A7C-14918ABDED6B}|..\\TeamUpServices\\TeamUpServices.csproj|c:\\teamupfolder\\teamupservices\\category\\abstraction\\icategoryqueries.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B8FD14A-5AE1-4796-9A7C-14918ABDED6B}|..\\TeamUpServices\\TeamUpServices.csproj|c:\\teamupfolder\\teamupservices\\category\\abstraction\\icategorycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B8FD14A-5AE1-4796-9A7C-14918ABDED6B}|..\\TeamUpServices\\TeamUpServices.csproj|c:\\teamupfolder\\teamupservices\\category\\mappingdtos\\categorymapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,7 +29,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 357,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -40,28 +45,80 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserCommand.cs",
-              "DocumentMoniker": "C:\\TeamUpFolder\\TeamUpServices\\USERS\\IMPLEMENTATION\\UserCommand.cs",
-              "RelativeDocumentMoniker": "..\\TeamUpServices\\USERS\\IMPLEMENTATION\\UserCommand.cs",
-              "ToolTip": "C:\\TeamUpFolder\\TeamUpServices\\USERS\\IMPLEMENTATION\\UserCommand.cs",
-              "RelativeToolTip": "..\\TeamUpServices\\USERS\\IMPLEMENTATION\\UserCommand.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAgwDsAAAAbAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "CategoriesController.cs",
+              "DocumentMoniker": "C:\\TeamUpFolder\\TeamUp\\Controllers\\Categorie\\CategoriesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Categorie\\CategoriesController.cs",
+              "ToolTip": "C:\\TeamUpFolder\\TeamUp\\Controllers\\Categorie\\CategoriesController.cs",
+              "RelativeToolTip": "Controllers\\Categorie\\CategoriesController.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAswDMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-26T10:09:54.198Z",
+              "WhenOpened": "2026-09-26T16:48:50.317Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RoleController.cs",
-              "DocumentMoniker": "C:\\TeamUpFolder\\TeamUp\\Controllers\\Role\\RoleController.cs",
-              "RelativeDocumentMoniker": "Controllers\\Role\\RoleController.cs",
-              "ToolTip": "C:\\TeamUpFolder\\TeamUp\\Controllers\\Role\\RoleController.cs",
-              "RelativeToolTip": "Controllers\\Role\\RoleController.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAQwFMAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "CategoryQueries.cs",
+              "DocumentMoniker": "C:\\TeamUpFolder\\TeamUpServices\\Category\\IMPLEMENTATION\\CategoryQueries.cs",
+              "RelativeDocumentMoniker": "..\\TeamUpServices\\Category\\IMPLEMENTATION\\CategoryQueries.cs",
+              "ToolTip": "C:\\TeamUpFolder\\TeamUpServices\\Category\\IMPLEMENTATION\\CategoryQueries.cs",
+              "RelativeToolTip": "..\\TeamUpServices\\Category\\IMPLEMENTATION\\CategoryQueries.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-26T09:38:04.439Z",
+              "WhenOpened": "2026-09-26T16:46:36.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CategoryCommand.cs",
+              "DocumentMoniker": "C:\\TeamUpFolder\\TeamUpServices\\Category\\IMPLEMENTATION\\CategoryCommand.cs",
+              "RelativeDocumentMoniker": "..\\TeamUpServices\\Category\\IMPLEMENTATION\\CategoryCommand.cs",
+              "ToolTip": "C:\\TeamUpFolder\\TeamUpServices\\Category\\IMPLEMENTATION\\CategoryCommand.cs",
+              "RelativeToolTip": "..\\TeamUpServices\\Category\\IMPLEMENTATION\\CategoryCommand.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAACMAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-26T16:44:23.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ICategoryCommand.cs",
+              "DocumentMoniker": "C:\\TeamUpFolder\\TeamUpServices\\Category\\ABSTRACTION\\ICategoryCommand.cs",
+              "RelativeDocumentMoniker": "..\\TeamUpServices\\Category\\ABSTRACTION\\ICategoryCommand.cs",
+              "ToolTip": "C:\\TeamUpFolder\\TeamUpServices\\Category\\ABSTRACTION\\ICategoryCommand.cs",
+              "RelativeToolTip": "..\\TeamUpServices\\Category\\ABSTRACTION\\ICategoryCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-26T16:43:28.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ICategoryQueries.cs",
+              "DocumentMoniker": "C:\\TeamUpFolder\\TeamUpServices\\Category\\ABSTRACTION\\ICategoryQueries.cs",
+              "RelativeDocumentMoniker": "..\\TeamUpServices\\Category\\ABSTRACTION\\ICategoryQueries.cs",
+              "ToolTip": "C:\\TeamUpFolder\\TeamUpServices\\Category\\ABSTRACTION\\ICategoryQueries.cs",
+              "RelativeToolTip": "..\\TeamUpServices\\Category\\ABSTRACTION\\ICategoryQueries.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-26T16:43:16.087Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CategoryMapping.cs",
+              "DocumentMoniker": "C:\\TeamUpFolder\\TeamUpServices\\Category\\MAPPINGDTOs\\CategoryMapping.cs",
+              "RelativeDocumentMoniker": "..\\TeamUpServices\\Category\\MAPPINGDTOs\\CategoryMapping.cs",
+              "ToolTip": "C:\\TeamUpFolder\\TeamUpServices\\Category\\MAPPINGDTOs\\CategoryMapping.cs",
+              "RelativeToolTip": "..\\TeamUpServices\\Category\\MAPPINGDTOs\\CategoryMapping.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-26T16:39:40.392Z",
               "EditorCaption": ""
             }
           ]
@@ -73,74 +130,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "5de67da6-8e15-42c4-9ed4-557d94f607c4",
-        "Display": 0,
-        "X": 1141,
-        "Y": 214,
-        "Width": 952,
-        "Height": 647,
-        "WindowState": 2
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserMapping.cs",
-              "DocumentMoniker": "C:\\TeamUpFolder\\TeamUpServices\\USERS\\MAPPINGDTOs\\UserMapping.cs",
-              "RelativeDocumentMoniker": "..\\TeamUpServices\\USERS\\MAPPINGDTOs\\UserMapping.cs",
-              "ToolTip": "C:\\TeamUpFolder\\TeamUpServices\\USERS\\MAPPINGDTOs\\UserMapping.cs",
-              "RelativeToolTip": "..\\TeamUpServices\\USERS\\MAPPINGDTOs\\UserMapping.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-26T09:07:34.954Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "1632f9dd-1f8a-4cac-9fc3-e0fc33197fa9",
-        "Display": 0,
-        "X": 995,
-        "Y": 360,
-        "Width": 952,
-        "Height": 647,
-        "WindowState": 2
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\TeamUpFolder\\TeamUp\\Controllers\\User\\UsersController.cs",
-              "RelativeDocumentMoniker": "Controllers\\User\\UsersController.cs",
-              "ToolTip": "C:\\TeamUpFolder\\TeamUp\\Controllers\\User\\UsersController.cs",
-              "RelativeToolTip": "Controllers\\User\\UsersController.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAowEsAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-26T09:39:21.211Z",
-              "EditorCaption": ""
             }
           ]
         }

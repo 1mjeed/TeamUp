@@ -1,6 +1,5 @@
 ﻿using TeamUpCore.Model;
 using TeamUpServices.PROJECT.DTOS;
-using TeamUpServices.USERS.DTOS;
 
 namespace TeamUpServices.PROJECT.MAPPINGDTOs
 {
@@ -38,7 +37,7 @@ namespace TeamUpServices.PROJECT.MAPPINGDTOs
 
             return new ProjectReturnDto
             {
-                Id=project.Id,
+                Id = project.Id,
                 Title = project.Title,
                 Description = project.Description,
                 CapaCity = project.CapaCity,

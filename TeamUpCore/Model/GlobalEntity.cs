@@ -1,6 +1,6 @@
 ﻿namespace TeamUpCore.Model
 {
-    public class GlobalEntity
+    public abstract class GlobalEntity
     {
         #region  Proprities
         /// <summary>
