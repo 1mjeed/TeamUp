@@ -21,7 +21,6 @@ namespace TeamUpAPI.Controllers.Project
 
         #region Get All Projects
         [HttpGet]
-        [Route("GetAllProjects")]
         public async Task<IActionResult> GetAllProjects()
         {
             var projects = await _projectQueries.GetAllProjectsAsync();
@@ -30,8 +29,7 @@ namespace TeamUpAPI.Controllers.Project
         #endregion
 
         #region Get Project By ID
-        [HttpGet]
-        [Route("GetProjectById/{id}")]
+        [HttpGet("{id}")]
         public async Task<IActionResult> GetProjectById(int id)
         {
             if (id < 1) return BadRequest();
@@ -46,8 +44,7 @@ namespace TeamUpAPI.Controllers.Project
         #endregion
 
         #region Create Project
-        [HttpPost]
-        [Route("CreateProject")]
+        [HttpPost]       
         public async Task<IActionResult> CreateProject(ProjectCreateDto projectDto)
         {
             if (!ModelState.IsValid)
@@ -63,8 +60,7 @@ namespace TeamUpAPI.Controllers.Project
         #endregion
 
         #region Update Project
-        [HttpPut]
-        [Route("UpdateProject/{id}")]
+        [HttpPut("{id}")]        
         public async Task<IActionResult> UpdateProject(int id, ProjectUpdateDto projectUpdateDto)
         {
             if (id < 1) return BadRequest();
@@ -82,8 +78,7 @@ namespace TeamUpAPI.Controllers.Project
         #endregion
 
         #region Delete Project
-        [HttpDelete]
-        [Route("DeleteProject/{id}")]
+        [HttpDelete("{id}")]        
         public async Task<IActionResult> DeleteProject(int id)
         {
             if (id < 1) return BadRequest();

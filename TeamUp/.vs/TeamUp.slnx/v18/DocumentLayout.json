@@ -1,15 +1,23 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\TeamUpFolder\\TeamUp\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A0354C88-B26D-FAB0-1767-17E96A6FE427}|TeamUpAPI.csproj|c:\\teamupfolder\\teamup\\controllers\\role\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0354C88-B26D-FAB0-1767-17E96A6FE427}|TeamUpAPI.csproj|solutionrelative:controllers\\role\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B8FD14A-5AE1-4796-9A7C-14918ABDED6B}|..\\TeamUpServices\\TeamUpServices.csproj|c:\\teamupfolder\\teamupservices\\users\\implementation\\usercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "DockedWidth": 357,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,11 +30,37 @@
             {
               "$type": "Bookmark",
               "Name": "ST:11:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserCommand.cs",
+              "DocumentMoniker": "C:\\TeamUpFolder\\TeamUpServices\\USERS\\IMPLEMENTATION\\UserCommand.cs",
+              "RelativeDocumentMoniker": "..\\TeamUpServices\\USERS\\IMPLEMENTATION\\UserCommand.cs",
+              "ToolTip": "C:\\TeamUpFolder\\TeamUpServices\\USERS\\IMPLEMENTATION\\UserCommand.cs",
+              "RelativeToolTip": "..\\TeamUpServices\\USERS\\IMPLEMENTATION\\UserCommand.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAgwDsAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-26T10:09:54.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RoleController.cs",
+              "DocumentMoniker": "C:\\TeamUpFolder\\TeamUp\\Controllers\\Role\\RoleController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Role\\RoleController.cs",
+              "ToolTip": "C:\\TeamUpFolder\\TeamUp\\Controllers\\Role\\RoleController.cs",
+              "RelativeToolTip": "Controllers\\Role\\RoleController.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAQwFMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-26T09:38:04.439Z",
+              "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedWidth": 248,
+          "DockedWidth": 91,
           "SelectedChildIndex": -1,
           "Children": [
             {

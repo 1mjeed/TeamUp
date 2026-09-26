@@ -6,7 +6,7 @@ namespace TeamUpCore.Model
     /// <summary>
     /// Project Entity || كيـــان المشـــروع
     /// </summary>
-    public class Project
+    public class Project : GlobalEntity
     {
         #region Properties 
         /// <summary>

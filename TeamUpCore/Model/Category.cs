@@ -6,7 +6,7 @@ namespace TeamUpCore.Model
     /// <summary>
     /// Category Entity || كيـــان الفئة
     /// </summary>
-    public class Category
+    public class Category : GlobalEntity
     {
         #region Properties
 

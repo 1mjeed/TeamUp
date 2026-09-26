@@ -11,11 +11,4 @@
     <ProjectReference Include="..\TeamUpCore\TeamUpCore.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="ROLES\ABSTRACTION\" />
-    <Folder Include="ROLES\DTOS\" />
-    <Folder Include="ROLES\IMPLEMENTATION\" />
-    <Folder Include="ROLES\MAPPINGDTOs\" />
-  </ItemGroup>
-
 </Project>

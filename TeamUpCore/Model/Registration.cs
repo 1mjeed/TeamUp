@@ -6,7 +6,7 @@ namespace TeamUpCore.Model
     /// <summary>
     /// Registration Entity || كيـــان التسجيـــل
     /// </summary>
-    public class Registration
+    public class Registration : GlobalEntity
     {
         #region Properties
         /// <summary>

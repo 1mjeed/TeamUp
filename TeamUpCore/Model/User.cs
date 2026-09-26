@@ -6,7 +6,7 @@ namespace TeamUpCore.Model
     /// <summary>
     /// User Entity || كيـــان المستخـــدم
     /// </summary>
-    public class User
+    public class User : GlobalEntity
     {
         #region Properties
 

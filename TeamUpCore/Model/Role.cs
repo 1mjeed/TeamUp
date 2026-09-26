@@ -6,7 +6,7 @@ namespace TeamUpCore.Model
     /// <summary>
     /// Role Entity || كيـــان الصلاحيـــات
     /// </summary>
-    public class Role
+    public class Role : GlobalEntity
     {
         #region Properties
         /// <summary>

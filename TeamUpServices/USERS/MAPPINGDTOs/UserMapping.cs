@@ -3,7 +3,7 @@ using TeamUpServices.USERS.DTOS;
 
 namespace TeamUpServices.USERS.MAPPINGDTOs
 {
-   
+
     public static class UserMapping
     {
         #region  UserCreateDto
@@ -41,7 +41,7 @@ namespace TeamUpServices.USERS.MAPPINGDTOs
                 Id = user.Id,
                 Name = user.Name,
                 Phone = user.Phone,
-                Description = user.Description ,
+                Description = user.Description,
                 ImgUrl = user.ImgUrl //  هون بدي اضيف بالمستقبل انه اذا ما كان عنده صوره ارسل صوره افتراضيه ان شاء الله 
                                      // بهاض الاسلوب ان شاء الله 
                                      //ImgUrl = user.ImgUrl ?? "https://yourdomain.com/images/default-avatar.png"

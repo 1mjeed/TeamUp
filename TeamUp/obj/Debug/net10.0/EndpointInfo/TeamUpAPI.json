@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/Projects/GetAllProjects": {
+    "/api/Projects": {
       "get": {
         "tags": [
           "Projects"
@@ -15,32 +15,7 @@
             "description": "OK"
           }
         }
-      }
-    },
-    "/api/Projects/GetProjectById/{id}": {
-      "get": {
-        "tags": [
-          "Projects"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Projects/CreateProject": {
+      },
       "post": {
         "tags": [
           "Projects"
@@ -71,7 +46,28 @@
         }
       }
     },
-    "/api/Projects/UpdateProject/{id}": {
+    "/api/Projects/{id}": {
+      "get": {
+        "tags": [
+          "Projects"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
       "put": {
         "tags": [
           "Projects"
@@ -111,9 +107,7 @@
             "description": "OK"
           }
         }
-      }
-    },
-    "/api/Projects/DeleteProject/{id}": {
+      },
       "delete": {
         "tags": [
           "Projects"
@@ -136,7 +130,7 @@
         }
       }
     },
-    "/api/Users/GetAllUsers": {
+    "/api/Users": {
       "get": {
         "tags": [
           "Users"
@@ -146,32 +140,7 @@
             "description": "OK"
           }
         }
-      }
-    },
-    "/api/Users/GetUserById/{id}": {
-      "get": {
-        "tags": [
-          "Users"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Users/CreateUser": {
+      },
       "post": {
         "tags": [
           "Users"
@@ -202,7 +171,28 @@
         }
       }
     },
-    "/api/Users/UpdateUser/{id}": {
+    "/api/Users/{id}": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
       "put": {
         "tags": [
           "Users"

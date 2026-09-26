@@ -2,6 +2,8 @@ using Microsoft.EntityFrameworkCore;
 using TeamUpData;
 using TeamUpServices.PROJECT.ABSTRACTION;
 using TeamUpServices.PROJECT.IMPLEMENTATION;
+using TeamUpServices.ROLES.ABSTRACTION;
+using TeamUpServices.ROLES.IMPLEMENTATION;
 using TeamUpServices.USERS.ABSTRACTION;
 using TeamUpServices.USERS.IMPLEMENTATION;
 namespace TeamUp
@@ -32,6 +34,13 @@ namespace TeamUp
             builder.Services.AddScoped<IProjectCommand, ProjectCommand>();
             builder.Services.AddScoped<IProjectQueries, ProjectQueries>();
             #endregion
+
+            #region Dependency Injection Role  
+            builder.Services.AddScoped<IRoleCommand, RoleCommand>();
+            builder.Services.AddScoped<IRoleQueries, RoleQueries>();
+            #endregion
+
+
 
 
 
