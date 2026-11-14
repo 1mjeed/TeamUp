@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using TeamUpServices.REGISTRATIONS.ABSTRACTION;
 using TeamUpServices.REGISTRATIONS.DTOS;
 
@@ -8,12 +9,17 @@ namespace TeamUpAPI.Controllers.Registration
     [ApiController]
     public class RegistrationController : ControllerBase
     {
+        #region Dependence Injection
         private readonly IRegistrationCommand _command;
 
         public RegistrationController(IRegistrationCommand command)
         {
             _command = command;
         }
+        #endregion
+
+        #region  Create Registration
+        [Authorize(Roles = "Student")]// لازم تتعدل 
         [HttpPost]
         public async Task<IActionResult> CreateRegistrationAsync(RegistrationCreateDto registrationCreateDto)
         {
@@ -23,6 +29,10 @@ namespace TeamUpAPI.Controllers.Registration
             var newR = await _command.CreateRegistrationAsync(registrationCreateDto);
             return Ok(newR);
         }
+        #endregion
+
+        #region  Update Registration
+        [Authorize(Roles = "Student, Admin")]
         [HttpPut]
         public async Task<IActionResult> UpdateRegistrationStatusAsync(RegistrationUpdateStatusDto registrationUpdateStatusDto)
         {
@@ -36,5 +46,9 @@ namespace TeamUpAPI.Controllers.Registration
             return Ok(updateR);
 
         }
+        #endregion
     }
 }
+//الثغرة الخفية(تنتظر درس الـ Policy): بما أن أي طالب يستطيع الدخول، ما الذي يمنع الطالب "علي" من إرسال DTO يحتوي على StudentId الخاص بالطالب "عمر"، ويورطه في الانضمام لمشروع لا يريده؟!
+
+//الحل القادم: سيعلمك الدكتور كيف تقرأ الـ ID من الـ Token مباشرة وتقارنه بالـ DTO (هل Token.Id == DTO.StudentId؟).

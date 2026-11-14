@@ -53,11 +53,12 @@ namespace TeamUpServices.USERS.IMPLEMENTATION
         public async Task<bool> DeleteUserAsync(int userId) 
         {
             
-            var rowsAffected = await _context.Users
-                .Where(x=>x.Id == userId)
-                .ExecuteDeleteAsync();
+           var user = _context.Users.Find(userId);
+            if(user == null) return false;
 
-            return (rowsAffected > 0);
+             _context.Users.Remove(user);
+
+            return await _context.SaveChangesAsync()>0;
         }
         #endregion
     }

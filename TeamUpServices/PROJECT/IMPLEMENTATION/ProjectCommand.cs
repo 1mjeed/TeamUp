@@ -55,11 +55,12 @@ namespace TeamUpServices.PROJECT.IMPLEMENTATION
         #region Delete Project
         public async Task<bool> DeleteProjectAsync(int projectId)
         {
-            var rowsAffected = await _context.Projects.
-                Where(x => x.Id == projectId)
-                .ExecuteDeleteAsync();
+            var project = await _context.Projects.FindAsync(projectId);
 
-            return (rowsAffected > 0);
+            if(project == null) return false;
+
+            _context.Projects.Remove(project);
+            return await _context.SaveChangesAsync()>0;
         }
 
         #endregion

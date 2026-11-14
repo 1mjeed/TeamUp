@@ -10,8 +10,7 @@ namespace TeamUpServices.USERS.DTOS
         /// University Number / Identifier
         /// </summary>
         
-        [Required(ErrorMessage ="الرجاء أدخال الرقم الجامعي ")]
-        public string UNEnumber { get; set; }
+         public string UNEnumber { get; set; }
 
         /// <summary>
         /// Name
@@ -40,9 +39,11 @@ namespace TeamUpServices.USERS.DTOS
         /// <summary>
         /// Phone Number
         /// </summary>
-       
+        [Required(ErrorMessage = "الرجاء أدخال رقم الهاتف ")]
+        [MinLength(10, ErrorMessage = " رقم الهاتف غير صحيح")]
         [Phone]
         public string Phone { get; set; }
+
 
         #endregion
     }

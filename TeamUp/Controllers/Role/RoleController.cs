@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using TeamUpServices.ROLES.ABSTRACTION;
 using TeamUpServices.ROLES.DTOS;
 namespace TeamUpAPI.Controllers.Role
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(Roles = "Admin")]
     public class RoleController : ControllerBase
     {
         #region Dependence Injection

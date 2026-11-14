@@ -20,7 +20,7 @@ namespace TeamUpCore.Model
         /// <summary>
         /// University Number / Identifier
         /// </summary>
-        [Required]
+        
         [StringLength(50)]
         public string UNEnumber { get; set; }
 
@@ -52,7 +52,7 @@ namespace TeamUpCore.Model
         /// </summary>
         [Required]
         [StringLength(255)]
-        public string Password { get; set; }
+        public string PasswordHash { get; set; }
 
         /// <summary>
         /// User Bio / Description

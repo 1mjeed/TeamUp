@@ -205,6 +205,24 @@ namespace TeamUpData.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Roles");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CREATEDAT = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CREATEDBY = 0,
+                            ISDELETED = false,
+                            Name = "Admin"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CREATEDAT = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CREATEDBY = 0,
+                            ISDELETED = false,
+                            Name = "Student"
+                        });
                 });
 
             modelBuilder.Entity("TeamUpCore.Model.User", b =>
@@ -248,7 +266,7 @@ namespace TeamUpData.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<string>("Password")
+                    b.Property<string>("PasswordHash")
                         .IsRequired()
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");

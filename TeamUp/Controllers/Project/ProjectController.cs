@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 using TeamUpServices.PROJECT.ABSTRACTION;
 using TeamUpServices.PROJECT.DTOS;
 
@@ -20,6 +22,7 @@ namespace TeamUpAPI.Controllers.Project
         #endregion
 
         #region Get All Projects
+        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> GetAllProjects()
         {
@@ -29,6 +32,7 @@ namespace TeamUpAPI.Controllers.Project
         #endregion
 
         #region Get Project By ID
+        [AllowAnonymous]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetProjectById(int id)
         {
@@ -44,6 +48,7 @@ namespace TeamUpAPI.Controllers.Project
         #endregion
 
         #region Create Project
+        [Authorize]
         [HttpPost]       
         public async Task<IActionResult> CreateProject(ProjectCreateDto projectDto)
         {
@@ -60,15 +65,31 @@ namespace TeamUpAPI.Controllers.Project
         #endregion
 
         #region Update Project
+        [Authorize]
         [HttpPut("{id}")]        
         public async Task<IActionResult> UpdateProject(int id, ProjectUpdateDto projectUpdateDto)
         {
             if (id < 1) return BadRequest();
+            if (!ModelState.IsValid) return BadRequest(ModelState);
 
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+            var userIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            int authenticatedUserId = int.Parse(userIdClaim);
+            bool isAdmin = User.IsInRole("Admin");
 
-            var isUpdated = await _projectCommand.UpdateProjectAsync(id, projectUpdateDto);
+            if (!isAdmin)
+            {
+ 
+                var project = await _projectQueries.GetProjectByIdAsync(id);
+
+                 if (project == null) return NotFound(new { message = "Project not found." });
+
+                  if (authenticatedUserId != project.UserId)
+                {
+                    return Forbid(); 
+                }
+            }
+ 
+             var isUpdated = await _projectCommand.UpdateProjectAsync(id, projectUpdateDto);
 
             if (!isUpdated)
                 return BadRequest(new { message = "Failed to update the project. It may not exist or invalid data was provided." });
@@ -78,10 +99,27 @@ namespace TeamUpAPI.Controllers.Project
         #endregion
 
         #region Delete Project
+        [Authorize(Roles = "Student, Admin")]
         [HttpDelete("{id}")]        
         public async Task<IActionResult> DeleteProject(int id)
         {
             if (id < 1) return BadRequest();
+
+            var UserIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier); 
+            int authenticatedUserId = int.Parse(UserIdClaim);
+            bool isAdmin = User.IsInRole("Admin");
+
+            if (!isAdmin)
+            {
+                var project = await _projectQueries.GetProjectByIdAsync(id);
+
+                if (project == null) return NotFound(new { message = "Project not found." });
+
+                if (authenticatedUserId != project.UserId)
+                {
+                    return Forbid();
+                }
+            }
 
             var isDeleted = await _projectCommand.DeleteProjectAsync(id);
 

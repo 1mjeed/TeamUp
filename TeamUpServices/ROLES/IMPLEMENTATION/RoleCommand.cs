@@ -44,13 +44,12 @@ namespace TeamUpServices.ROLES.IMPLEMENTATION
 
         public async Task<bool> DeleteRoleAsync(int roleId)
         {
-            if (roleId <= 0) return false;
+            var role = await _context.Roles.FindAsync(roleId);
+            if (role == null) return false;
 
-            var rowsAffected = await _context.Roles
-                .Where(r => r.Id == roleId)
-                .ExecuteDeleteAsync();
+            _context.Roles.Remove(role);// هاي حسب فهمي انها مثل الختم انه تم حذفها بس هي مانحذفت عشان ال تراكنق يشوفها بعرف على طول انها المقصد حذف وال اوفر رايد الي عملناه بلعب لهبته 
 
-            return rowsAffected > 0;
+            return await _context.SaveChangesAsync() > 0;
         }
     }
 }

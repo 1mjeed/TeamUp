@@ -14,7 +14,7 @@ namespace TeamUpServices.USERS.MAPPINGDTOs
                 UNEnumber = createDto.UNEnumber,
                 Name = createDto.Name,
                 Email = createDto.Email,
-                Password = createDto.Password,
+                PasswordHash = createDto.Password,
                 Phone = createDto.Phone,
                 RoleId = 1
             };

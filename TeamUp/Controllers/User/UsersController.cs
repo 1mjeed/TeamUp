@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 using TeamUpServices.USERS.ABSTRACTION;
 using TeamUpServices.USERS.DTOS;
 
@@ -20,15 +22,16 @@ namespace TeamUpAPI.Controllers.User
         #endregion
 
         #region Get Users (ALL - By ID)
+        // [Authorize]
+        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> GetAllUsers()
         {
             var users = await _usersQueries.GetAllUsersAsync();
-            if (users == null) return NotFound();
-
             return Ok(users);
         }
 
+        [Authorize]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetUserById(int id)
         {
@@ -43,6 +46,7 @@ namespace TeamUpAPI.Controllers.User
         #endregion
 
         #region  Create User
+        [Authorize(Roles = "Admin")]// الادمن بس الي مسموحله يعمل خسابات للاخرين 
         [HttpPost]
         public async Task<IActionResult> CreateUser(UserCreateDto createDto)
         {
@@ -53,11 +57,22 @@ namespace TeamUpAPI.Controllers.User
         #endregion
 
         #region Update User
-
-        [HttpPut("{id}")]
+        [Authorize]
+        [HttpPut("{id}")]//Ownership Policy
         public async Task<IActionResult> UpdateUser(int id, UserUpdateDto updateDto)
         {
             if (id < 1) return BadRequest();
+
+            var userIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            if (string.IsNullOrEmpty(userIdClaim) || !int.TryParse(userIdClaim, out int authenticatedUserId))
+                return Unauthorized();
+
+            // authenticatedUserId = int.Parse(userIdClaim);
+            bool isAdmin = User.IsInRole("Admin");
+
+            if (!isAdmin && authenticatedUserId != id)
+                return Forbid();
 
             var isUpdated = await _usersCommand.UpdateUserAsync(id, updateDto);
 
@@ -68,10 +83,18 @@ namespace TeamUpAPI.Controllers.User
         #endregion
 
         #region Delete User
+        [Authorize] // Ownership Policy  
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUser(int id)
         {
             if (id < 1) return BadRequest();
+
+            var userIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            int authenticatedUserId = int.Parse(userIdClaim);
+            bool isAdmin = User.IsInRole("Admin");
+
+            if (!isAdmin && authenticatedUserId != id)
+                return Forbid();
 
             var isDeleted = await _usersCommand.DeleteUserAsync(id);
 

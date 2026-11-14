@@ -1,8 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using TeamUpData;
+﻿using TeamUpData;
 using TeamUpServices.Category.ABSTRACTION;
 using TeamUpServices.Category.DTOS;
 using TeamUpServices.Category.MAPPINGDTOs;
@@ -30,10 +26,14 @@ namespace TeamUpServices.Category.IMPLEMENTATION
             return await _context.SaveChangesAsync() > 0;
         }
 
-        public async Task<bool> DeleteCategoryAsync(int id)
+        public async Task<bool> DeleteCategoryAsync(int Categoryid)
         {
-            if (id <= 0) return false;
-            return await _context.Categories.Where(c => c.Id == id).ExecuteDeleteAsync() > 0;
+            var category = await _context.Categories.FindAsync(Categoryid);
+
+            if (category == null) return false;
+
+            _context.Categories.Remove(category);
+            return await _context.SaveChangesAsync() > 0;
         }
     }
 }

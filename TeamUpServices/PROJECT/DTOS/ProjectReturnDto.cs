@@ -1,4 +1,5 @@
-﻿using TeamUpServices.USERS.DTOS;
+﻿using System.ComponentModel.DataAnnotations;
+using TeamUpServices.USERS.DTOS;
 
 namespace TeamUpServices.PROJECT.DTOS
 {
@@ -29,6 +30,13 @@ namespace TeamUpServices.PROJECT.DTOS
         /// Project Current Status
         /// </summary>
         public int Status { get; set; }
+
+        /// <summary>
+        /// User ID (Foreign Key)
+        /// </summary>
+       
+        [Required]
+        public int UserId { get; set; }
 
         #endregion
 
