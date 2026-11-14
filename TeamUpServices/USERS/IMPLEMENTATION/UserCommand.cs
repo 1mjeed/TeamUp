@@ -1,5 +1,4 @@
 ﻿#region Using 
-using Microsoft.EntityFrameworkCore;
 using TeamUpCore.Model;
 using TeamUpData;
 using TeamUpServices.USERS.ABSTRACTION;
@@ -15,9 +14,9 @@ namespace TeamUpServices.USERS.IMPLEMENTATION
         #region Dependency Injection
         private readonly TeamUpDbContext _context;
 
-        public UserCommand(TeamUpDbContext context) 
-        { 
-        _context = context;
+        public UserCommand(TeamUpDbContext context)
+        {
+            _context = context;
         }
         #endregion
 
@@ -30,12 +29,12 @@ namespace TeamUpServices.USERS.IMPLEMENTATION
 
             var rowsAffected = await _context.SaveChangesAsync();
 
-            return rowsAffected > 0; 
+            return rowsAffected > 0;
         }
         #endregion
 
         #region Update User
-        public async Task<bool> UpdateUserAsync(int userId , UserUpdateDto updatedto)
+        public async Task<bool> UpdateUserAsync(int userId, UserUpdateDto updatedto)
         {
             var existingUser = await _context.Users.FindAsync(userId);
 
@@ -50,15 +49,15 @@ namespace TeamUpServices.USERS.IMPLEMENTATION
         #endregion
 
         #region Delete User
-        public async Task<bool> DeleteUserAsync(int userId) 
+        public async Task<bool> DeleteUserAsync(int userId)
         {
-            
-           var user = _context.Users.Find(userId);
-            if(user == null) return false;
 
-             _context.Users.Remove(user);
+            var user = _context.Users.Find(userId);
+            if (user == null) return false;
 
-            return await _context.SaveChangesAsync()>0;
+            _context.Users.Remove(user);
+
+            return await _context.SaveChangesAsync() > 0;
         }
         #endregion
     }

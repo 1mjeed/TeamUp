@@ -3,19 +3,12 @@
   "WorkspaceRootPath": "C:\\TeamUpFolder\\TeamUp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2B8FD14A-5AE1-4796-9A7C-14918ABDED6B}|..\\TeamUpServices\\TeamUpServices.csproj|c:\\teamupfolder\\teamupservices\\users\\mappingdtos\\usermapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A0354C88-B26D-FAB0-1767-17E96A6FE427}|TeamUpAPI.csproj|c:\\teamupfolder\\teamup\\controllers\\authorization\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0354C88-B26D-FAB0-1767-17E96A6FE427}|TeamUpAPI.csproj|solutionrelative:controllers\\authorization\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2B8FD14A-5AE1-4796-9A7C-14918ABDED6B}|..\\TeamUpServices\\TeamUpServices.csproj|c:\\teamupfolder\\teamupservices\\users\\dtos\\usercreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C2F10B3-DD59-9DD7-0E88-CB10AA76586C}|..\\TeamUpCore\\TeamUpCore.csproj|c:\\teamupfolder\\teamupcore\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2B8FD14A-5AE1-4796-9A7C-14918ABDED6B}|..\\TeamUpServices\\TeamUpServices.csproj|c:\\teamupfolder\\teamupservices\\auth\\implementation\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2B8FD14A-5AE1-4796-9A7C-14918ABDED6B}|..\\TeamUpServices\\TeamUpServices.csproj|c:\\teamupfolder\\teamupservices\\auth\\dtos\\registerrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A0354C88-B26D-FAB0-1767-17E96A6FE427}|TeamUpAPI.csproj|c:\\teamupfolder\\teamup\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0354C88-B26D-FAB0-1767-17E96A6FE427}|TeamUpAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,67 +18,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 83,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserMapping.cs",
-              "DocumentMoniker": "C:\\TeamUpFolder\\TeamUpServices\\USERS\\MAPPINGDTOs\\UserMapping.cs",
-              "RelativeDocumentMoniker": "..\\TeamUpServices\\USERS\\MAPPINGDTOs\\UserMapping.cs",
-              "ToolTip": "C:\\TeamUpFolder\\TeamUpServices\\USERS\\MAPPINGDTOs\\UserMapping.cs",
-              "RelativeToolTip": "..\\TeamUpServices\\USERS\\MAPPINGDTOs\\UserMapping.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-06T22:27:27.393Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserCreateDto.cs",
-              "DocumentMoniker": "C:\\TeamUpFolder\\TeamUpServices\\USERS\\DTOS\\UserCreateDto.cs",
-              "RelativeDocumentMoniker": "..\\TeamUpServices\\USERS\\DTOS\\UserCreateDto.cs",
-              "ToolTip": "C:\\TeamUpFolder\\TeamUpServices\\USERS\\DTOS\\UserCreateDto.cs",
-              "RelativeToolTip": "..\\TeamUpServices\\USERS\\DTOS\\UserCreateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-06T22:25:19.401Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\TeamUpFolder\\TeamUpCore\\Model\\User.cs",
-              "RelativeDocumentMoniker": "..\\TeamUpCore\\Model\\User.cs",
-              "ToolTip": "C:\\TeamUpFolder\\TeamUpCore\\Model\\User.cs",
-              "RelativeToolTip": "..\\TeamUpCore\\Model\\User.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABsAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-06T22:25:00.288Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RegisterRequestDto.cs",
-              "DocumentMoniker": "C:\\TeamUpFolder\\TeamUpServices\\Auth\\DTOS\\RegisterRequestDto.cs",
-              "RelativeDocumentMoniker": "..\\TeamUpServices\\Auth\\DTOS\\RegisterRequestDto.cs",
-              "ToolTip": "C:\\TeamUpFolder\\TeamUpServices\\Auth\\DTOS\\RegisterRequestDto.cs",
-              "RelativeToolTip": "..\\TeamUpServices\\Auth\\DTOS\\RegisterRequestDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-06T22:22:50.307Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Bookmark",
@@ -93,15 +30,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "C:\\TeamUpFolder\\TeamUpServices\\Auth\\IMPLEMENTATION\\AuthService.cs",
-              "RelativeDocumentMoniker": "..\\TeamUpServices\\Auth\\IMPLEMENTATION\\AuthService.cs",
-              "ToolTip": "C:\\TeamUpFolder\\TeamUpServices\\Auth\\IMPLEMENTATION\\AuthService.cs",
-              "RelativeToolTip": "..\\TeamUpServices\\Auth\\IMPLEMENTATION\\AuthService.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAUwGEAAAAdAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\TeamUpFolder\\TeamUp\\Controllers\\Authorization\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Authorization\\AuthController.cs",
+              "ToolTip": "C:\\TeamUpFolder\\TeamUp\\Controllers\\Authorization\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\Authorization\\AuthController.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAowDgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-06T22:21:51.714Z",
+              "WhenOpened": "2026-11-13T22:35:35.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\TeamUpFolder\\TeamUp\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\TeamUpFolder\\TeamUp\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-13T22:34:54.48Z",
               "EditorCaption": ""
             }
           ]

@@ -38,7 +38,7 @@ namespace TeamUpData
             }
             #endregion
 
-        #region Roles
+            #region Roles
 
             modelBuilder.Entity<Role>().HasData
                 (

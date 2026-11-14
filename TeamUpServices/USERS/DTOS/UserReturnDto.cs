@@ -21,11 +21,11 @@
         /// <summary>
         /// User Bio / Description
         /// </summary>
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
         /// <summary>
         /// Profile Image URL
         /// </summary>
-        public string ImgUrl { get; set; }
+        public string? ImgUrl { get; set; }
     }
 }

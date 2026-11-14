@@ -22,7 +22,7 @@ namespace TeamUpCore.Model
         /// </summary>
         
         [StringLength(50)]
-        public string UNEnumber { get; set; }
+        public string? UNEnumber { get; set; }
 
         /// <summary>
         ///  Name
@@ -66,6 +66,13 @@ namespace TeamUpCore.Model
         [StringLength(500)]
         public string? ImgUrl { get; set; }
 
+        #endregion
+        #region Refresh Token
+        //  الحقول الخاصة بـ Refresh Token
+        public string? RefreshTokenHash { get; set; } 
+        public DateTime? RefreshTokenExpiresAt { get; set; }
+        public DateTime? RefreshTokenRevokedAt { get; set; }
+        //  المشورع القادم بدي اعمله يكون بتيبل مستقل 
         #endregion
 
         #region Relational Database (Foreign Keys)

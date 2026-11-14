@@ -67,7 +67,7 @@
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[10.3.0, )"
+              "version": "[11.0.1, )"
             }
           },
           "imports": [
@@ -415,7 +415,7 @@
           "dependencies": {
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[10.3.0, )"
+              "version": "[11.0.1, )"
             }
           },
           "imports": [

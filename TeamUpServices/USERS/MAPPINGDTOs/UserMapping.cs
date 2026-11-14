@@ -16,7 +16,7 @@ namespace TeamUpServices.USERS.MAPPINGDTOs
                 Email = createDto.Email,
                 PasswordHash = createDto.Password,
                 Phone = createDto.Phone,
-                RoleId = 1
+                RoleId = 1// مش محتاج بهاي المرحله انه يكون ديناميكي
             };
         }
         #endregion

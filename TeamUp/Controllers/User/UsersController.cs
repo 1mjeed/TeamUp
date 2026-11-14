@@ -21,8 +21,7 @@ namespace TeamUpAPI.Controllers.User
         }
         #endregion
 
-        #region Get Users (ALL - By ID)
-        // [Authorize]
+        #region Get Users (ALL - By ID)        
         [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> GetAllUsers()
@@ -59,23 +58,19 @@ namespace TeamUpAPI.Controllers.User
         #region Update User
         [Authorize]
         [HttpPut("{id}")]//Ownership Policy
-        public async Task<IActionResult> UpdateUser(int id, UserUpdateDto updateDto)
+        public async Task<IActionResult> UpdateUser(
+            int id,
+            UserUpdateDto updateDto,
+            [FromServices] IAuthorizationService authorizationService) 
         {
             if (id < 1) return BadRequest();
+            
+            var authResult = await authorizationService.AuthorizeAsync(User, id, "StudentOwnerOrAdminPolicy");
 
-            var userIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
-
-            if (string.IsNullOrEmpty(userIdClaim) || !int.TryParse(userIdClaim, out int authenticatedUserId))
-                return Unauthorized();
-
-            // authenticatedUserId = int.Parse(userIdClaim);
-            bool isAdmin = User.IsInRole("Admin");
-
-            if (!isAdmin && authenticatedUserId != id)
-                return Forbid();
+            if (!authResult.Succeeded)
+                return Forbid(); 
 
             var isUpdated = await _usersCommand.UpdateUserAsync(id, updateDto);
-
             if (!isUpdated) return NotFound();
 
             return Ok();
@@ -85,19 +80,18 @@ namespace TeamUpAPI.Controllers.User
         #region Delete User
         [Authorize] // Ownership Policy  
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteUser(int id)
+        public async Task<IActionResult> DeleteUser(
+            int id,
+            [FromServices] IAuthorizationService authorizationService) 
         {
             if (id < 1) return BadRequest();
 
-            var userIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            int authenticatedUserId = int.Parse(userIdClaim);
-            bool isAdmin = User.IsInRole("Admin");
+            var authResult = await authorizationService.AuthorizeAsync(User, id, "StudentOwnerOrAdminPolicy");
 
-            if (!isAdmin && authenticatedUserId != id)
+            if (!authResult.Succeeded)
                 return Forbid();
 
             var isDeleted = await _usersCommand.DeleteUserAsync(id);
-
             if (!isDeleted) return NotFound();
 
             return Ok();

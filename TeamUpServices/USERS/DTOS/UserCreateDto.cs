@@ -10,7 +10,7 @@ namespace TeamUpServices.USERS.DTOS
         /// University Number / Identifier
         /// </summary>
         
-         public string UNEnumber { get; set; }
+         public string? UNEnumber { get; set; }
 
         /// <summary>
         /// Name

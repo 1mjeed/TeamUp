@@ -16,6 +16,8 @@ namespace TeamUpServices.USERS.DTOS
         /// <summary>
         /// Phone Number
         /// </summary>
+        [Required(ErrorMessage = "الرجاء أدخال رقم الهاتف ")]
+        [MinLength(10, ErrorMessage = " رقم الهاتف غير صحيح")]
         [Phone]
         public string Phone { get; set; }
 

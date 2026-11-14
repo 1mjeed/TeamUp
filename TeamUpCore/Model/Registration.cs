@@ -12,6 +12,7 @@ namespace TeamUpCore.Model
         /// <summary>
         /// Registration  ID
         /// </summary>
+      
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
@@ -19,6 +20,7 @@ namespace TeamUpCore.Model
         /// <summary>
         /// Registration Current Status
         /// </summary>
+        
         [Required]
         public int Status { get; set; }
 

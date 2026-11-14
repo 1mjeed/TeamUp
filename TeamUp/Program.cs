@@ -1,21 +1,9 @@
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi;
-using TeamUpData;
-using TeamUpServices.Auth.ABSTRACTION;
-using TeamUpServices.Auth.IMPLEMENTATION;
-using TeamUpServices.Category.ABSTRACTION;
-using TeamUpServices.Category.IMPLEMENTATION;
-using TeamUpServices.PROJECT.ABSTRACTION;
-using TeamUpServices.PROJECT.IMPLEMENTATION;
-using TeamUpServices.REGISTRATIONS.ABSTRACTION;
-using TeamUpServices.REGISTRATIONS.IMPLEMENTATION;
-using TeamUpServices.ROLES.ABSTRACTION;
-using TeamUpServices.ROLES.IMPLEMENTATION;
-using TeamUpServices.USERS.ABSTRACTION;
-using TeamUpServices.USERS.IMPLEMENTATION;
+using TeamUpAPI;
+using TeamUpAPI.Controllers.Authorization;
 namespace TeamUp
 {
     public class Program
@@ -59,37 +47,7 @@ namespace TeamUp
             });
             #endregion
 
-            #region  AddDbContext DI
-            builder.Services.AddDbContext<TeamUpDbContext>(options =>
-               options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-            #endregion
-
-            #region Dependency Injection User  
-            builder.Services.AddScoped<IUsersQueries, UsersQueries>();
-            builder.Services.AddScoped<IUserCommand, UserCommand>();
-            #endregion
-
-            #region Dependency Injection Project  
-            builder.Services.AddScoped<IProjectCommand, ProjectCommand>();
-            builder.Services.AddScoped<IProjectQueries, ProjectQueries>();
-            #endregion
-
-            #region Dependency Injection Catagory  
-            builder.Services.AddScoped<ICategoryCommand, CategoryCommand>();
-            builder.Services.AddScoped<ICategoryQueries, CategoryQueries>();
-            #endregion
-
-            #region Dependency Injection Role  
-            builder.Services.AddScoped<IRoleCommand, RoleCommand>();
-            builder.Services.AddScoped<IRoleQueries, RoleQueries>();
-            #endregion
-
-            #region Dependency Injection Registration  
-            builder.Services.AddScoped<IRegistrationCommand, RegistrationCommand>();
-            builder.Services.AddScoped<IRegistrationQueries, RegistrationQueries>();
-            #endregion
-
-            builder.Services.AddScoped<IAuthService, AuthService>();
+            builder.Services.AddTeamUpServices(builder.Configuration);
 
             #region JWT Authentication Configuration 
             // قراءة الإعدادات من appsettings.json
@@ -131,7 +89,17 @@ namespace TeamUp
 
             #endregion
 
+            #region StudentOwnerOrAdminPolicy Requirements
+
             builder.Services.AddHttpContextAccessor();
+
+            builder.Services.AddAuthorization(options =>
+            {
+                options.AddPolicy("StudentOwnerOrAdminPolicy", policy =>
+                    policy.Requirements.Add(new StudentOwnerOrAdminRequirement()));
+            });
+
+            #endregion
 
             #region app
             var app = builder.Build();

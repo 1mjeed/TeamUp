@@ -7,6 +7,8 @@ using TeamUpServices.REGISTRATIONS.MAPPINGDTOs;
 
 namespace TeamUpServices.REGISTRATIONS.IMPLEMENTATION
 {
+        #region Dependency Injection
+
     public class RegistrationCommand : IRegistrationCommand
     {
         private readonly TeamUpDbContext _context;
@@ -16,6 +18,10 @@ namespace TeamUpServices.REGISTRATIONS.IMPLEMENTATION
             _context = context;
         }
 
+    #endregion
+
+        #region Create  Registration
+
         public async Task<bool> CreateRegistrationAsync(RegistrationCreateDto createDto)
         {
             if (createDto == null) return false;
@@ -24,7 +30,7 @@ namespace TeamUpServices.REGISTRATIONS.IMPLEMENTATION
                 .AsNoTracking()
                 .FirstOrDefaultAsync(p => p.Id == createDto.ProjectId);
 
-            if (project == null) return false; 
+            if (project == null) return false;
 
             var userExists = await _context.Users
                 .AnyAsync(u => u.Id == createDto.UserId);
@@ -34,13 +40,13 @@ namespace TeamUpServices.REGISTRATIONS.IMPLEMENTATION
             var isDuplicate = await _context.Registrations
                 .AnyAsync(r => r.ProjectID == createDto.ProjectId && r.UserID == createDto.UserId);
 
-            if (isDuplicate) return false; 
+            if (isDuplicate) return false;
 
             var approvedMembersCount = await _context.Registrations
                 .CountAsync(r => r.ProjectID == createDto.ProjectId && r.Status == 1);
 
             if (approvedMembersCount >= project.CapaCity)
-                return false; 
+                return false;
 
             Registration reg = RegistrationMapping.MAPPINGDTO(createDto);
 
@@ -50,20 +56,23 @@ namespace TeamUpServices.REGISTRATIONS.IMPLEMENTATION
 
             return rowsAffected > 0;
         }
+        #endregion
 
+        #region Update Registration
         public async Task<bool> UpdateRegistrationStatusAsync(RegistrationUpdateStatusDto updateDto)
         {
-            if(updateDto == null) return false;
+            if (updateDto == null) return false;
 
             var registration = await _context.Registrations.FindAsync(updateDto.RegistrationId);
             if (registration == null) return false;
 
-             registration.Status = updateDto.Status;
+            registration.Status = updateDto.Status;//هون في مشكله انا متأكد
 
             _context.Registrations.Update(registration);
             var affectedRows = await _context.SaveChangesAsync();
 
             return affectedRows > 0;
         }
+        #endregion
     }
 }

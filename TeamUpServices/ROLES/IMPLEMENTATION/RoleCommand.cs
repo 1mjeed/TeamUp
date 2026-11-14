@@ -8,12 +8,17 @@ namespace TeamUpServices.ROLES.IMPLEMENTATION
 {
     public class RoleCommand : IRoleCommand
     {
+        #region Dependency Injection
+
         private readonly TeamUpDbContext _context;
 
         public RoleCommand(TeamUpDbContext context)
         {
             _context = context;
         }
+        #endregion
+
+        #region Create Role
 
         public async Task<bool> CreateRoleAsync(RoleCreateDto roleDto)
         {
@@ -27,6 +32,9 @@ namespace TeamUpServices.ROLES.IMPLEMENTATION
             return rowsAffected > 0;
         }
 
+        #endregion
+
+        #region Update Role
         public async Task<bool> UpdateRoleAsync(int roleId, RoleUpdateDto roleUpdateDto)
         {
             if (roleId < 1 || roleUpdateDto == null) return false;
@@ -42,6 +50,9 @@ namespace TeamUpServices.ROLES.IMPLEMENTATION
             return rowsAffected > 0;
         }
 
+        #endregion
+
+        #region Delete  Role
         public async Task<bool> DeleteRoleAsync(int roleId)
         {
             var role = await _context.Roles.FindAsync(roleId);
@@ -51,5 +62,6 @@ namespace TeamUpServices.ROLES.IMPLEMENTATION
 
             return await _context.SaveChangesAsync() > 0;
         }
+        #endregion
     }
 }

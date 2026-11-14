@@ -1,6 +1,5 @@
 ﻿using TeamUpCore.Model;
 using TeamUpServices.REGISTRATIONS.DTOS;
-using TeamUpServices.USERS.DTOS;
 
 namespace TeamUpServices.REGISTRATIONS.MAPPINGDTOs
 {
@@ -13,7 +12,7 @@ namespace TeamUpServices.REGISTRATIONS.MAPPINGDTOs
             {
                 ProjectID = createDto.ProjectId,
                 UserID = createDto.UserId,
-                Status = 0 
+                Status = 0
             };
         }
         #endregion

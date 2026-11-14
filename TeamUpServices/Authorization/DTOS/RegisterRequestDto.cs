@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace TeamUpServices.Auth.DTOS
+namespace TeamUpServices.Authorization.DTOS
 {
     public class RegisterRequestDto
     {

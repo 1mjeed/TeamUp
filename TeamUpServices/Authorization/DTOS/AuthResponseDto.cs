@@ -1,4 +1,4 @@
-﻿namespace TeamUpServices.Auth.DTOS
+﻿namespace TeamUpServices.Authorization.DTOS
 {
     public class AuthResponseDto
     {
