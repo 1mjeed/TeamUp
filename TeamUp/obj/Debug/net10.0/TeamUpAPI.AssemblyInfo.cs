@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TeamUpAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a47a47b0f89d371e059a812d918cb6ab383f45a6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+931177c1a3e8502e3af7ef54bbf903a176b43b1e")]
 [assembly: System.Reflection.AssemblyProductAttribute("TeamUpAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TeamUpAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
