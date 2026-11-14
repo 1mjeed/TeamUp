@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using TeamUpServices.Authorization.ABSTRACTION;
 using TeamUpServices.Authorization.DTOS;
+using Microsoft.AspNetCore.RateLimiting;
 
 namespace TeamUpAPI.Controllers.Authorization
 {
@@ -10,20 +11,29 @@ namespace TeamUpAPI.Controllers.Authorization
     public class AuthController : ControllerBase
     {
         private readonly IAuthService _authService;
+        private readonly ILogger<AuthController> _logger;
 
-        public AuthController(IAuthService authService)
+        public AuthController(IAuthService authService , ILogger<AuthController> logger)
         {
             _authService = authService;
+            _logger = logger;
         }
 
         [AllowAnonymous]
         [HttpPost("login")]
-        public async Task<IActionResult> Login([FromBody] LoginRequestDto loginDto)
+        [EnableRateLimiting("AuthLimiter")]
+        public async Task<IActionResult> Login([FromBody] LoginRequestDto loginDto )
         {
+            var ip = HttpContext.Connection.RemoteIpAddress?.ToString() ?? "unknown";
             var result = await _authService.LoginAsync(loginDto);
 
             if (result == null)
+            {
+                _logger.LogWarning("Failed login attempt. Email={Email}, IP={IP}", loginDto.Email, ip);
                 return Unauthorized("Invalid email or password.");
+            }
+
+            _logger.LogInformation("Successful login. Email={Email}, IP={IP}", loginDto.Email, ip);
 
             return Ok(result);
         }
@@ -41,12 +51,18 @@ namespace TeamUpAPI.Controllers.Authorization
 
 
         [HttpPost("refresh")]
+        [EnableRateLimiting("AuthLimiter")] 
         public async Task<IActionResult> Refresh([FromBody] RefreshRequestDto refreshDto)
         {
+            var ip = HttpContext.Connection.RemoteIpAddress?.ToString() ?? "unknown";
             var result = await _authService.RefreshTokenAsync(refreshDto);
 
             if (result == null)
+            {
+
+                _logger.LogInformation("Successful login. Email={Email}, IP={IP}", refreshDto.Email, ip);
                 return Unauthorized("Invalid or expired refresh token. Please login again.");
+            }
 
             return Ok(result);
         }

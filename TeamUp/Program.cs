@@ -1,9 +1,13 @@
+using System.Security.Claims;
 using System.Text;
+using System.Threading.RateLimiting;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi;
 using TeamUpAPI;
 using TeamUpAPI.Controllers.Authorization;
+using System.Security.Claims;
+
 namespace TeamUp
 {
     public class Program
@@ -13,6 +17,71 @@ namespace TeamUp
             var builder = WebApplication.CreateBuilder(args);
             // Add services to the container.
             builder.Services.AddControllers();
+
+            //#region RateLimiter
+            ////  إعدادات حماية الـ API من هجمات الـ Brute-Force
+            //builder.Services.AddRateLimiter(options =>
+            //{
+            //    options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
+
+            //    options.AddPolicy("AuthLimiter", httpContext =>
+            //    {
+            //        var ip = httpContext.Connection.RemoteIpAddress?.ToString() ?? "unknown";
+
+            //        return RateLimitPartition.GetFixedWindowLimiter(
+            //            partitionKey: ip,
+            //            factory: _ => new FixedWindowRateLimiterOptions
+            //            {
+            //                PermitLimit = 3,
+            //                Window = TimeSpan.FromMinutes(1), // خلال دقيقة واحدة
+            //                QueueLimit = 0 // رفض الطلبات الزائدة فوراً دون وضعها في طابور انتظار
+            //            });
+            //    });
+            //});
+            //#endregion
+
+            #region RateLimiter
+            builder.Services.AddRateLimiter(options =>
+            {
+                options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
+
+                // 🚨 إضافة "غرفة العمليات": ماذا نفعل عندما نكتشف هجوماً؟
+                options.OnRejected = async (context, token) =>
+                {
+                    // 1. جلب الـ IP الخاص بالمهاجم
+                    var ip = context.HttpContext.Connection.RemoteIpAddress?.ToString() ?? "unknown";
+
+                    // 2. جلب المسار الذي يتعرض للهجوم
+                    var path = context.HttpContext.Request.Path;
+
+                    // 3. كتابة تحذير شديد اللهجة في الـ Logs (نواة الـ SIEM)
+                    var logger = context.HttpContext.RequestServices.GetRequiredService<ILogger<Program>>();
+                    logger.LogCritical("🚨 DOS ATTACK DETECTED! IP: {IP} is attacking Path: {Path}. Requests are being blocked.", ip, path);
+
+                    // 4. (خطوة مستقبلية) هنا يمكنك إضافة كود لإرسال إيميل أو إشعار Telegram للأدمن!
+                    // await EmailService.SendEmergencyAlertAsync(ip, path);
+
+                    // إرجاع الرسالة للمهاجم
+                    context.HttpContext.Response.StatusCode = StatusCodes.Status429TooManyRequests;
+                    await context.HttpContext.Response.WriteAsync("Stop. You have been flagged for abusive behavior.", token);
+                };
+
+                options.AddPolicy("AuthLimiter", httpContext =>
+                {
+                    var ip = httpContext.Connection.RemoteIpAddress?.ToString() ?? "unknown";
+
+                    return RateLimitPartition.GetFixedWindowLimiter(
+                        partitionKey: ip,
+                        factory: _ => new FixedWindowRateLimiterOptions
+                        {
+                            PermitLimit = 3,
+                            Window = TimeSpan.FromMinutes(1),
+                            QueueLimit = 0
+                        });
+                });
+            });
+            #endregion
+
             //// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             //builder.Services.AddOpenApi();
             builder.Services.AddEndpointsApiExplorer();
@@ -116,9 +185,43 @@ namespace TeamUp
 
             app.UseCors("TeamUpApiCorsPolicy");// هاي انا كتبتها هو موقعها الصح ولازم تعرف انه هاي عشان تطبق ال Cors
 
+            #region RateLimiter Write
+            app.UseRateLimiter();
+
+            //  رسالة مخصصة (اختيارية) لتوضيح سبب الحظر دون كشف الأرقام الداخلية للهاكر
+            app.Use(async (context, next) =>
+            {
+                await next();
+                if (context.Response.StatusCode == StatusCodes.Status429TooManyRequests)
+                {
+                    await context.Response.WriteAsync("Too many login attempts. Please try again later.");
+                }
+            });
+            #endregion
+
+
             app.UseAuthentication();
             app.UseAuthorization();
+            #region (Global 403 Logger)
+            app.Use(async (context, next) =>
+            {
+                await next();
+
+                // إذا حاول شخص الدخول لمسار لا يملك صلاحيته (مثلاً طالب يحاول الدخول لمسار أدمن)
+                if (context.Response.StatusCode == StatusCodes.Status403Forbidden)
+                {
+                    var userId = context.User.FindFirstValue(ClaimTypes.NameIdentifier) ?? "anonymous";
+                    var ip = context.Connection.RemoteIpAddress?.ToString() ?? "unknown";
+                    var path = context.Request.Path.ToString();
+
+                     app.Logger.LogWarning(
+                        "Forbidden access attempted. UserId={UserId}, Path={Path}, IP={IP}",
+                        userId, path, ip);
+                }
+            });
+            #endregion
             app.MapControllers();//تكون قبل هاي 
+
 
             app.Run();
 
